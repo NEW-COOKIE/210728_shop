@@ -1,10 +1,13 @@
 import Vue from 'vue';
-import App from './App.vue';
-import router from './router/index';
-
 import 'lib-flexible';
 
-Vue.config.productionTip = false
+import App from './App.vue';
+import router from './router/index';
+import Herder from '@/components/Herder/Herder.vue';
+Vue.config.productionTip = false;
+
+// 注册全局组件
+Vue.component('Herder', Herder)
 
 new Vue({
   render: h => h(App),

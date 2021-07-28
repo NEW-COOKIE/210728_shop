@@ -52,7 +52,8 @@ export default {
   left: 0
   bottom: 0
   width: 100%
-  height: 100px
+  height: 50px
+  background white
   .guide-item
     display flex
     flex-direction column
@@ -62,7 +63,7 @@ export default {
       color $green
     span
       margin-top 3px
-      font-size 24px
+      font-size 12px
       i
-        font-size 50px
+        font-size 24px
 </style>

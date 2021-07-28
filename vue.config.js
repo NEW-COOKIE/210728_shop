@@ -1,6 +1,10 @@
 const path = require('path');
 const px2rem = require('postcss-px2rem');
 
+const postcss = px2rem({
+    remUnit: 37.5
+})
+
 module.exports = {
 
     lintOnSave: false,
@@ -10,10 +14,7 @@ module.exports = {
             css: {},
             postcss: {
                 plugins: [
-                    require('postcss-px2rem')({
-                        // 以设计稿750为例， 750 / 10 = 75
-                        remUnit: 75.5
-                    }),
+                    postcss
                 ]
             }
         }
