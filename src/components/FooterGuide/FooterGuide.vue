@@ -4,28 +4,28 @@
       <span>
         <i class="iconfont icon-icon-test"></i>
       </span>
-      <span>首页</span>
+      <span>{{$t('footer_home')}}</span>
     </span>
 
     <span class="guide-item" :class="{no: $route.path === '/search'}" @click="goto('/search')">
       <span>
         <i class="iconfont icon-search"></i>
       </span>
-      <span>搜索</span>
+      <span>{{$t('footer_search')}}</span>
     </span>
 
     <span class="guide-item" :class="{no: $route.path === '/order'}" @click="goto('/order')">
       <span>
         <i class="iconfont icon-emaxcitygerenxinxitubiaoji03"></i>
       </span>
-      <span>订单</span>
+      <span>{{$t('footer_order')}}</span>
     </span>
 
     <span class="guide-item" :class="{no: $route.path === '/profile'}" @click="goto('/profile')">
       <span>
         <i class="iconfont icon-yonghudianji"></i>
       </span>
-      <span>个人</span>
+      <span>{{$t('footer_own')}}</span>
     </span>
   </div>
 </template>
@@ -36,8 +36,19 @@ export default {
   
   methods: {
     goto(path) {
-      // 编程式路由跳转
-      this.$router.replace(path);
+      /* 一。如果点击当前项，没有如有效果 */
+      /* if(path !== this.$route.path) {
+        // 编程式路由跳转
+        this.$router.replace(path);
+      } */
+
+      /* 一。如果点击当前项，没有如有效果 */
+      if(path !== this.$route.path) {
+        // 编程式路由跳转
+        this.$router.replace(path);
+      }else {
+        window.location = path
+      }
     }
   }
 };

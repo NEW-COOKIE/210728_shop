@@ -6,7 +6,6 @@ const postcss = px2rem({
 })
 
 module.exports = {
-
     lintOnSave: false,
 
     css: {
@@ -30,12 +29,22 @@ module.exports = {
     },
 
     devServer: {
+        port: 8080,
         proxy: {
             "/api": {
-                target: "http://localhost:3000",
+                target: "http://localhost:4000",
                 pathRewrite: { "^/api": "" },
                 changeOrigin: true
             }
         }
+    },
+
+    pluginOptions: {
+      i18n: {
+        locale: 'zh_CN',
+        fallbackLocale: 'en',
+        localeDir: 'locales',
+        enableInSFC: false
+      }
     }
 }

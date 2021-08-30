@@ -1,13 +1,13 @@
 <template>
   <section class="search">
-    <Herder title="搜 索">
+    <Header title="搜 索">
 
-    </Herder>
-        <form class="search_form" action="#">
-          <input type="search" name="search" placeholder="请输入商家或美食名称" class="search_input">
-          <input type="submit" name="submit" class="search_submit">
-        </form>
-      </section>
+    </Header>
+    <form class="search_form" action="#">
+      <input type="search" name="search" placeholder="请输入商家或美食名称" class="search_input">
+      <input type="submit" name="submit" class="search_submit">
+    </form>
+  </section>
 </template>
 
 <script type="text/ecmascript-6">
